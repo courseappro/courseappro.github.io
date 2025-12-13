@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const installerwin = document.getElementsByClassName('btn primary-cta win32');
 for (let i = 0; i < installerwin.length; i++) {
     installerwin[i].addEventListener('click', () => {
-        window.location.href = 'https://github.com/josecantero/curseApp/releases/download/v1.0.74/curseApp.Setup.1.0.74.exe';
+        window.location.href = 'https://github.com/josecantero/curseApp/releases/download/v1.0.74/courseapp-1.0.74.Setup.exe';
     });
 }
 const installerlin = document.getElementsByClassName('btn primary-cta linux');
