@@ -453,6 +453,24 @@ footer {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0), 0 0 0 0px;
 }
 
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100; /* Aseguramos que esté por encima de otros elementos */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-text-light);
+    transition: all 0.3s ease-in-out;
+}
+
 
 
 /* --- MEDIA QUERIES (Responsividad) --- */
@@ -512,6 +530,67 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+
+    /* 1. Mostramos el botón hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    .header .container {
+        /* Volvemos a justificar el espacio entre logo y botón */
+        justify-content: space-between; 
+    }
+    
+    /* 2. Ocultamos el menú NAV en su estado inicial en móvil */
+    nav {
+        /* Lo sacamos del flujo normal */
+        position: absolute;
+        top: 65px; /* Altura de la cabecera */
+        left: 0;
+        width: 100%;
+        height: 0; /* Lo ocultamos haciendo la altura 0 */
+        background-color: var(--color-bg); 
+        overflow: hidden; /* Esto es CLAVE para la animación de deslizamiento */
+        transition: height 0.3s ease-in-out;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0;
+    }
+
+    /* 3. Estilo de los enlaces en el menú móvil */
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+        width: 90%;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    /* 4. Estado "Abierto" (Esta clase la añade JavaScript) */
+    .nav-open {
+        height: 150px; /* Altura suficiente para mostrar 2-3 enlaces */
+        /* Ajusta esta altura si añades más enlaces, para que todos quepan */
+    }
+
+    /* 5. Animación del ícono Hamburguesa a "X" */
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0; /* Barra del medio desaparece */
+    }
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* El resto de las media queries (hero, features, etc.) */
+    /* ... (Manten las media queries que ya tenías) ... */
 }
 
 /* --- ESTILOS ESPECÍFICOS PARA EL CHANGELOG --- */
