@@ -513,3 +513,125 @@ footer {
         gap: 10px;
     }
 }
+
+/* --- ESTILOS ESPECÍFICOS PARA EL CHANGELOG --- */
+
+.changelog-hero {
+    padding: 80px 0 40px;
+    text-align: center;
+    background-color: #1a1a2c; /* Un tono un poco más claro que el fondo principal */
+}
+
+.changelog-hero h1 {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.changelog-hero p {
+    font-size: 1.1rem;
+    color: var(--color-text-dim);
+}
+
+
+/* Estilos de la Línea de Tiempo */
+.changelog-list {
+    padding: 60px 0;
+    position: relative;
+    /* La línea vertical central */
+    border-left: 3px solid #202033; 
+    margin-left: 20px; /* Espacio para que la línea no esté pegada al borde */
+}
+
+.changelog-list .container {
+    max-width: 900px;
+}
+
+.release-group {
+    margin-bottom: 60px;
+}
+
+.release-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    padding-left: 30px;
+    margin-bottom: 25px;
+    position: relative;
+    /* Círculo marcador en la línea de tiempo */
+    margin-left: -20px; 
+}
+
+.release-date::before {
+    content: '';
+    position: absolute;
+    left: -18px; /* Ajusta la posición del círculo en la línea */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-primary); /* Círculo Turquesa */
+    border-radius: 50%;
+    border: 3px solid var(--color-bg); /* Borde para que se vea sobre la línea */
+    z-index: 10;
+}
+
+.release-version {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    padding-left: 30px;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: center;
+    /* Círculo marcador en la línea de tiempo */
+    margin-left: 20px; 
+}
+
+.changelog-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #202033; /* Fondo más claro para el item */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Desplaza el ítem hacia la derecha de la línea vertical */
+    margin-left: 10px; 
+}
+
+.changelog-item h3 {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    margin: 10px 0;
+}
+
+.changelog-item p {
+    color: var(--color-text-dim);
+    font-size: 0.95rem;
+}
+
+
+/* Estilos de las Etiquetas (Badges) */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-feature {
+    background-color: var(--color-primary); /* Turquesa Brillante */
+    color: var(--color-bg);
+}
+
+.badge-improvement {
+    background-color: var(--color-secondary); /* Verde Azulado */
+    color: var(--color-text-light);
+}
+
+.badge-fix {
+    background-color: #f44336; /* Rojo para Fix/Error */
+    color: white;
+}
