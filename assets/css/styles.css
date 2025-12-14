@@ -714,3 +714,49 @@ footer {
     background-color: #f44336; /* Rojo para Fix/Error */
     color: white;
 }
+
+.safe-install {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #1a1a2c; /* Tono ligeramente más claro que el fondo */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.safe-install h2 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.install-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-dim);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-container video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.small-note {
+    font-style: italic;
+    color: var(--color-text-dim);
+    margin-bottom: 20px;
+}
+
+.install-cta {
+    margin-top: 10px;
+}
