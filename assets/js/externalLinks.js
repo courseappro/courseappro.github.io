@@ -1,5 +1,5 @@
-const installerwinUrl = 'https://github.com/josecantero/curseApp/releases/download/v1.0.76/courseapp-1.0.76.Setup.exe';
-const installerlinUrl = 'https://github.com/josecantero/curseApp/releases/download/v1.0.76/curseApp-1.0.76.AppImage';
+const installerwinUrl = 'https://github.com/josecantero/curseApp/releases/download/v1.0.77/courseapp-1.0.77.Setup.exe';
+const installerlinUrl = 'https://github.com/josecantero/curseApp/releases/download/v1.0.77/curseApp-1.0.77.AppImage';
 const grupoFbUrl = 'https://www.facebook.com/groups/cursosgratisenstreaming/';
 
 const installerwin = document.getElementsByClassName('btn primary-cta win32');
