@@ -7,13 +7,13 @@ const winClass = 'win32'
 const linClass = 'linux'
 const fbg = 'fbg'
 
-const installerwin = document.getElementsByClassName(btnClass + 'win32');
+const installerwin = document.getElementsByClassName('btn primary-ctawin32');
 openExternalLink(installerwin, installerwinUrl);
 
-const installerlin = document.getElementsByClassName(btnClass + 'linux');
+const installerlin = document.getElementsByClassName('btn primary-cta linux');
 openExternalLink(installerlin, installerlinUrl);
 
-const grupoFb = document.getElementsByClassName(btnClass + 'fbg');
+const grupoFb = document.getElementsByClassName('btn primary-cta fbg');
 openExternalLink(grupoFb, grupoFbUrl);
 
 function openExternalLink(button, url) {
