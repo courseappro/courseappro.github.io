@@ -6,11 +6,11 @@ const btnClass = 'btn primary-cta'
 const winClass = 'win32'
 const linClass = 'linux'
 
-const installerwin = document.getElementsByClassName('btn primary-cta' + winClass);
+const installerwin = document.getElementsByClassName('btn primary-cta win32');
 console.log(installerwin);
 openExternalLink(installerwin, installerwinUrl);
 
-const installerlin = document.getElementsByClassName('btn primary-cta' + linClass);
+const installerlin = document.getElementsByClassName('btn primary-cta linux');
 console.log(installerlin);
 openExternalLink(installerlin, installerlinUrl);
 
