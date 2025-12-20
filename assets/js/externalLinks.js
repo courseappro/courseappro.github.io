@@ -5,16 +5,15 @@ const grupoFbUrl = 'https://www.facebook.com/groups/cursosgratisenstreaming/';
 const btnClass = 'btn primary-cta'
 const winClass = 'win32'
 const linClass = 'linux'
+const fbg = 'fbg'
 
-const installerwin = document.getElementsByClassName('btn primary-cta win32');
-console.log(installerwin);
+const installerwin = document.getElementsByClassName(btnClass + winClass);
 openExternalLink(installerwin, installerwinUrl);
 
-const installerlin = document.getElementsByClassName('btn primary-cta linux');
-console.log(installerlin);
+const installerlin = document.getElementsByClassName(btnClass + linClass);
 openExternalLink(installerlin, installerlinUrl);
 
-const grupoFb = document.getElementsByClassName(btnClass + ' fbg');
+const grupoFb = document.getElementsByClassName(btnClass + fbg);
 openExternalLink(grupoFb, grupoFbUrl);
 
 function openExternalLink(button, url) {
